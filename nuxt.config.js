@@ -30,6 +30,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/i18n.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -60,6 +61,32 @@ module.exports = {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         }
+      }
+    }
+  },
+  /*
+  ** i18n configuration
+  */
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English'
+      },
+      {
+        code: 'th',
+        iso: 'th-TH',
+        name: 'ไทย'
+      }
+    ],
+    defaultLocale: 'th',
+    vueI18n: {
+      messages: {
+        // eslint-disable-next-line global-require
+        th: require('./assets/lang/th.json'),
+        // eslint-disable-next-line global-require
+        en: require('./assets/lang/en.json')
       }
     }
   },

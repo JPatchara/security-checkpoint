@@ -33,7 +33,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
 
-    <v-content>
+    <v-content class="main-bg">
       <v-container>
         <nuxt />
       </v-container>
@@ -59,13 +59,13 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: this.$t('menu.home-page'),
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: this.$t('menu.report-page'),
+          to: '/report'
         }
       ],
       miniVariant: false,
@@ -73,6 +73,13 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
+  },
+  head () {
+    return {
+      link: [
+        { rel: 'stylesheet', href: '/css/main.css' }
+      ]
+    } 
   }
 }
 </script>

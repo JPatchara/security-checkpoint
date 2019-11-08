@@ -10,25 +10,14 @@
       md6
     >
       <div class="text-center">
+        <p class="display-2 py-md-5">
+          {{ $t('message.title') }}
+        </p>
+      </div>
+      <div class="text-center">
         <logo />
         <vuetify-logo />
       </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
     </v-flex>
   </v-layout>
 </template>
@@ -41,6 +30,13 @@ export default {
   components: {
     Logo,
     VuetifyLogo
+  },
+  head () {
+    return {
+      link: [
+        { rel: 'stylesheet', href: '/css/main.css' }
+      ]
+    } 
   }
 }
 </script>

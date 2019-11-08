@@ -1,0 +1,9 @@
+{
+    "message": {
+        "title": "Security Checkpoint Back Office"
+    },
+    "menu": {
+      "home-page": "Home",
+      "report-page": "Report"
+    }
+}
